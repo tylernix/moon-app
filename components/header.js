@@ -13,7 +13,7 @@ export default function Header() {
           <div className="flex justify-between items-center border-gray-100 py-8 md:py-12 md:justify-start space-x-4 md:space-x-10">
             <div className="flex justify-start">
               <a href="/">
-                <img className="h-10 w-auto sm:h-12" src="/img/mars-logo.png" alt="mars logo"></img>
+                <img className="h-10 w-auto sm:h-12" src="/img/moon-logo.png" alt="moon logo"></img>
               </a>
             </div>
             <div className="flex items-center justify-end md:flex-1">
