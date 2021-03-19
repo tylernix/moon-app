@@ -7,11 +7,13 @@ import Footer from '../components/footer';
 export default function Home() {
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
   let logInCard;
-  if (user) {
+  if (isLoading) {
+    logInCard = <LinkCard title="Loading..." />
+  }
+  else if (user) {
     logInCard = <LinkCard url="/api/auth/logout" title="Log Out" description={'Thanks ' + user.email + ' for visiting! Hope to see you again.'} />
   } else {
     logInCard = <LinkCard url="/api/auth/login" title="Log In" description="Get the most out of your favorite moon by logging in!" />
